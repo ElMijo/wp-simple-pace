@@ -1,0 +1,1 @@
+Pace.on('hide',function(){jQuery("#wpace-pace-inline-css").remove();});
