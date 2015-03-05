@@ -181,7 +181,7 @@ class WPaceSettingsFactory
 
         foreach ($options as $k => $v)
         {
-            $options_text.= sprintf($this->format_select_option,$k,selected($k,$value_selected),$v);
+            $options_text.= sprintf($this->format_select_option,$k,selected($k,$value_selected,false),$v);
         }
 
         return $options_text;

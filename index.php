@@ -14,7 +14,7 @@ define('WPACE_URL', plugin_dir_url(__FILE__));
 
 include_once WPACE_DIR.'/src/WPace/WPaceSettingsFactory.php';
 include_once WPACE_DIR.'/src/WPace/WPaceSettingsInterface.php';
-include_once WPACE_DIR.'/src/WPace/WPace.php';
 include_once WPACE_DIR.'/src/WPace/WPaceSettings.php';
+include_once WPACE_DIR.'/src/WPace/WPace.php';
 
 ?>

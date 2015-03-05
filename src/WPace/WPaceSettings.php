@@ -65,15 +65,18 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
                         'Mac OSX',
                         'Fill Left',
                         'Flat Top',
+                        'Big Counter',
                         'Corner Indicator',
                         'Bounce',
-                        'Big Counter',
-                        'Center Circle'
+                        'Loading Bar',
+                        'Center Circle',
+                        'Center Atom',
+                        'Center Radar',
+                        'Center Simple'
                     )
                 ),
             )
         );
     }
 }
-new WPaceSettings();
 ?>
