@@ -1,0 +1,28 @@
+minimal         -> .pace .pace-progress {background: #29d;}
+
+flash           ->  .pace .pace-progress {background: #29d;}.pace .pace-progress-inner {box-shadow: 0 0 10px #29d, 0 0 5px #29d;}.pace .pace-activity {  border-top-color: #29d;border-left-color: #29d;}
+
+barbershop      -> .pace .pace-progress {background-color: #29d;}
+
+macosx          -> .pace .pace-progress {background-color: #29d;}
+
+fillleft        -> .pace .pace-progress {background-color: rgba(0, 0, 0, 0.19999999999999996);}
+
+flattop         -> .pace .pace-progress {background: #29d;}
+
+bigcounter      -> .pace .pace-progress:after {color: rgba(0, 0, 0, 0.19999999999999996);}
+
+cornerindicator -> .pace .pace-activity {background: #29d;}
+
+bounce          -> .pace .pace-activity {background: #29d;}
+
+loadingbar      -> .pace .pace-progress {background: #29d;color: #29d;}.pace .pace-activity {box-shadow: inset 0 0 0 2px #29d, inset 0 0 0 7px #FFF;}
+
+centercircle    -> .pace .pace-progress {background: rgba(34, 153, 221, 0.8);}
+
+centeratom      -> .pace .pace-progress:before {background: #29d;}.pace .pace-activity {border: 5px solid #29d;}.pace .pace-activity:after {border: 5px solid #29d;}.pace .pace-activity:before {border: 5px solid #29d;}
+
+centerradar     -> .pace .pace-activity {border-color: #29d transparent transparent;}.pace .pace-activity:before {border-color: #29d transparent transparent;}
+
+centersimple     -> .pace {border: 1px solid #29d;}.pace .pace-progress {background: #29d;}
+
