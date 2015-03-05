@@ -54,9 +54,6 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
                     'title'    => 'Color Base',
                     'type'     => 'color',
                     'sanitize' => 'sanitize_hex_color',
-/*                    'attrs' => array(
-                        'class' => 'regular-text'
-                    )*/
                 ),
             )
         );
