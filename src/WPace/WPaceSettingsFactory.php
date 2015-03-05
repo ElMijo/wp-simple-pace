@@ -201,6 +201,8 @@ class WPaceSettingsFactory
                 case 'email':
                     $func_sanitize = 'sanitize_email';
                     break;
+                case 'color':
+                    $func_sanitize = 'sanitize_hex_color';
 
                 default:
                     $func_sanitize = 'sanitize_text_field';

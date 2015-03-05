@@ -52,8 +52,7 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
                 array(
                     'id'       => 'color-base',
                     'title'    => 'Color Base',
-                    'type'     => 'color',
-                    'sanitize' => 'sanitize_hex_color',
+                    'type'     => 'color'
                 ),
             )
         );
