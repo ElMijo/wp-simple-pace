@@ -50,9 +50,26 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
         return array(
             'estilo' => array(
                 array(
-                    'id'       => 'color-base',
-                    'title'    => 'Color Base',
-                    'type'     => 'color'
+                    'id'    => 'color-base',
+                    'title' => 'Color Base',
+                    'type'  => 'color'
+                ),
+                array(
+                    'id'    => 'tema-pace',
+                    'title' => 'Tema',
+                    'type'  => 'select',
+                    'list'  => array(
+                        'Minimal',
+                        'Flash',
+                        'Barber Shop',
+                        'Mac OSX',
+                        'Fill Left',
+                        'Flat Top',
+                        'Corner Indicator',
+                        'Bounce',
+                        'Big Counter',
+                        'Center Circle'
+                    )
                 ),
             )
         );

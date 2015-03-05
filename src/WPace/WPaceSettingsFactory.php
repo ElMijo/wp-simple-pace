@@ -40,7 +40,9 @@ class WPaceSettingsFactory
 
     protected $format_input_imgb64 = '<div id="imgbase64-uploader"><div class="box-img-upload"><p>Arrastre y suelte su imagen aqui <br>o haga click en esta área</p></div><div class="box-img-uploaded"><img src="%s" /></div></div><input type="hidden" id="%s" name="%s" value="%s" %s /><p><em>%s</em></p>';
 
+    protected $format_select = '<select id="%s" name="%s" %s >%s</select><p><em>%s</em></p>';
 
+    protected $format_select_option = '<option value="%s" %s >%s</option>';
 
 
     public function __construct()
@@ -64,22 +66,18 @@ class WPaceSettingsFactory
 
         $settings = $this->get_settings();
 
-        foreach ($this->servicios_class as $class)
-        {
-            $settings = array_merge_recursive($settings,$class->get_settings());
-        }
-
         foreach ($settings as $section_name => $section_fields)
         {
             foreach ($section_fields as $field)
             {
                 $this->setting_fields[$field['id']] = array(
-                    'type'     => isset($field['type'])?$field['type']:'text',
-                    'id'       => $field['id'],
-                    'setting'  => $this->setting_name,
-                    'name'     => $this->setting_name.'['.$field['id'].']',
-                    'help'     => isset($field['help'])?$field['help']:'',
-                    'attrs'    => isset($field['attrs'])?$field['attrs']:array(),
+                    'type'    => isset($field['type'])?$field['type']:'text',
+                    'id'      => $field['id'],
+                    'setting' => $this->setting_name,
+                    'name'    => $this->setting_name.'['.$field['id'].']',
+                    'help'    => isset($field['help'])?$field['help']:'',
+                    'attrs'   => isset($field['attrs'])?$field['attrs']:array(),
+                    'list'    => isset($field['list'])?$field['list']:array(),
                     'wysiwyg_settings' => isset($field['wysiwyg_settings'])?$field['wysiwyg_settings']:array()
                 );
 
@@ -124,9 +122,13 @@ class WPaceSettingsFactory
         $settings  = get_option($setting);
         $value     = isset($settings[$id])?esc_attr($settings[$id]):'';
         $attr_text = isset($attrs)?$this->attr_to_text($attrs):'';
+        $options_text = is_array($list)?$this->options_to_text($list,$value):'';
 
         switch ($type)
         {
+            case 'select':
+                $input = sprintf($this->format_select,$id,$name,$attr_text,$options_text,$help);
+                break;
             case 'imgbase64':
                 $input = sprintf($this->format_input_imgb64,$value,$id,$name,$value, $attr_text,$help);
                 break;
@@ -170,6 +172,19 @@ class WPaceSettingsFactory
         }
 
         return $attr_text;
+    }
+
+
+    private function options_to_text($options = array(),$value_selected = NULL)
+    {
+        $options_text = '';
+
+        foreach ($options as $k => $v)
+        {
+            $options_text.= sprintf($this->format_select_option,$k,selected($k,$value_selected),$v);
+        }
+
+        return $options_text;
     }
 
     /**
