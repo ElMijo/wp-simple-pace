@@ -45,7 +45,7 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
      */
     final public function menu_options()
     {
-        add_theme_page('Pace Opciones', 'Pace', $this->user_capability,$this->menu_slug, array($this,'menu_options_view'));
+        add_theme_page(__('Pace Opciones',WPACE_DOMAIN), 'Pace', $this->user_capability,$this->menu_slug, array($this,'menu_options_view'));
     }
 
     /**
@@ -67,12 +67,12 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
             'estilo' => array(
                 array(
                     'id'    => 'color-base',
-                    'title' => 'Color Base',
+                    'title' => __('Color Base',WPACE_DOMAIN),
                     'type'  => 'color'
                 ),
                 array(
                     'id'    => 'tema-pace',
-                    'title' => 'Tema',
+                    'title' => __('Tema',WPACE_DOMAIN),
                     'type'  => 'select',
                     'list'  => array(
                         'Minimal',
