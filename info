@@ -1,15 +1,9 @@
 minimal         -> .pace .pace-progress {background: #29d;}
-
 flash           ->  .pace .pace-progress {background: #29d;}.pace .pace-progress-inner {box-shadow: 0 0 10px #29d, 0 0 5px #29d;}.pace .pace-activity {  border-top-color: #29d;border-left-color: #29d;}
-
 barbershop      -> .pace .pace-progress {background-color: #29d;}
-
 macosx          -> .pace .pace-progress {background-color: #29d;}
-
 fillleft        -> .pace .pace-progress {background-color: rgba(0, 0, 0, 0.19999999999999996);}
-
 flattop         -> .pace .pace-progress {background: #29d;}
-
 bigcounter      -> .pace .pace-progress:after {color: rgba(0, 0, 0, 0.19999999999999996);}
 
 cornerindicator -> .pace .pace-activity {background: #29d;}
