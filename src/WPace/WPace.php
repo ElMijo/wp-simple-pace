@@ -67,7 +67,7 @@ class WPace extends WPaceSettings
     {
         wp_enqueue_style('wpace-pace', $this->get_pace_theme());
         wp_add_inline_style('wpace-pace', $this->get_color_pace_theme());
-        wp_enqueue_script('wpace-pace','https://raw.githubusercontent.com/HubSpot/pace/v1.0.0/pace.min.js', '1.0.0', false );
+        wp_enqueue_script('wpace-pace', WPACE_URL . 'inc/js/pace.js', '1.0.0', false );
         wp_enqueue_script('wpace-core', WPACE_URL . 'inc/js/wpace.js', array('jquery','wpace-pace'), '1.0.0', false );
     }
 

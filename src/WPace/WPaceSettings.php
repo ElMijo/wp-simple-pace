@@ -45,7 +45,7 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
      */
     final public function menu_options()
     {
-        add_theme_page(__('Pace Opciones',WPACE_DOMAIN), 'Pace', $this->user_capability,$this->menu_slug, array($this,'menu_options_view'));
+        add_theme_page(__('Pace Opciones',WPACE_DOMAIN), 'PACE', $this->user_capability,$this->menu_slug, array($this,'menu_options_view'));
     }
 
     /**
