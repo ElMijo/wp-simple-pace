@@ -1,8 +1,16 @@
 <?php
-
+/**
+ * Contiene la clase para crear las opciones del plugin
+ *
+ * @author Jerry Anselmi <jerry.anselmi@gmail.com>
+ * @copyright 2015 Jerry Anselmi
+ * @license MIT
+ * @package WPace
+ * @version 1.0
+ */
 
 /**
-* Clase base del plugin
+* Clase que contiene las opciones del plugin
 */
 class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInterface
 {
@@ -31,11 +39,19 @@ class WPaceSettings  extends WPaceSettingsFactory  implements WPaceSettingsInter
         add_action('admin_menu', array($this,'menu_options'));
     }
 
+    /**
+     * Metodo que permite registrar el submenu el plugin
+     * @return void
+     */
     final public function menu_options()
     {
-        add_theme_page('Opciones Pace', 'Pace', $this->user_capability,$this->menu_slug, array($this,'menu_options_view'));
+        add_theme_page('Pace Opciones', 'Pace', $this->user_capability,$this->menu_slug, array($this,'menu_options_view'));
     }
 
+    /**
+     * Metodo que se encarga de imprimir la vista del sub menu
+     * @return void
+     */
     final public function menu_options_view()
     {
         $titulo = get_admin_page_title();

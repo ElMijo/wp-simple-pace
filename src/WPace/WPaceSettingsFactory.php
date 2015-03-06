@@ -1,6 +1,17 @@
 <?php
+/**
+ * Contiene la clase base para crear opciones en wordpress
+ *
+ * @author Jerry Anselmi <jerry.anselmi@gmail.com>
+ * @copyright 2015 Jerry Anselmi
+ * @license MIT
+ * @package WPace
+ * @version 1.0
+ */
 
-
+/**
+ * Clase base para crear opciones en wordpress
+ */
 class WPaceSettingsFactory
 {
     /**
@@ -38,12 +49,23 @@ class WPaceSettingsFactory
      */
     protected $format_input_text = '<input type="%s" id="%s" name="%s" value="%s" %s /><p><em>%s</em></p>';
 
+    /**
+     * Cadena de texto con el formato para manejar una imagen base64
+     * @var string
+     */
     protected $format_input_imgb64 = '<div id="imgbase64-uploader"><div class="box-img-upload"><p>Arrastre y suelte su imagen aqui <br>o haga click en esta área</p></div><div class="box-img-uploaded"><img src="%s" /></div></div><input type="hidden" id="%s" name="%s" value="%s" %s /><p><em>%s</em></p>';
 
+    /**
+     * Cadena de texto con el formato para un select
+     * @var string
+     */
     protected $format_select = '<select id="%s" name="%s" %s >%s</select><p><em>%s</em></p>';
 
+    /**
+     * Cadena de texto con el formato para un option de un select
+     * @var string
+     */
     protected $format_select_option = '<option value="%s" %s >%s</option>';
-
 
     public function __construct()
     {
@@ -174,7 +196,12 @@ class WPaceSettingsFactory
         return $attr_text;
     }
 
-
+    /**
+     * Metodo que permite serializar un arreglo en una vadena de texto de option de elemento select.
+     * @param  array  $options        [description]
+     * @param  [type] $value_selected [description]
+     * @return [type]                 [description]
+     */
     private function options_to_text($options = array(),$value_selected = NULL)
     {
         $options_text = '';
