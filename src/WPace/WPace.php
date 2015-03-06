@@ -70,7 +70,7 @@ class WPace extends WPaceSettings
         $param = array("color" => $this->options["color-base"]);
         switch ($this->options["tema-pace"])
         {
-            case 1:
+            case 1:case 2:case 3:
                 $text = $this->theme_color_text[1];
                 break;
 
